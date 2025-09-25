@@ -1,0 +1,113 @@
+========== SLURM ENV ==========
+Thu Sep 25 06:36:15 EDT 2025
+dgxt001
+SLURM_JOB_ID=2841417
+SLURM_JOB_NODELIST=dgxt001
+CUDA_VISIBLE_DEVICES=0
+PWD=/home/axz402/bitnet-hpc
+\n========== MODULES ==========
+
+------------------ /usr/local/easybuild_allnodes/modules/all -------------------
+   4ti2/1.6.9-GCC-11.3.0
+   ABINIT/9.4.2-foss-2021a
+   ABINIT/9.6.2-intel-2021b
+   ABINIT/9.10.3-intel-2022a
+   ABINIT/10.0.5-intel-2022a                               (D)
+   ABySS/2.2.5-foss-2020b
+   ACTC/1.1-GCCcore-11.3.0
+   ANTs/2.5.0-foss-2022a
+   ANTs/2.5.0-foss-2022b                                   (D)
+   ASE/3.20.1-fosscuda-2020b
+   ASE/3.22.1-foss-2022a                                   (D)
+   ATK/2.36.0-GCCcore-10.3.0
+   ATK/2.36.0-GCCcore-11.2.0
+   ATK/2.38.0-GCCcore-11.3.0
+   ATK/2.38.0-GCCcore-12.2.0
+   ATK/2.38.0-GCCcore-12.3.0
+   ATK/2.38.0-GCCcore-13.2.0                               (D)
+   AUGUSTUS/3.4.0-foss-2021b
+   Abseil/20230125.2-GCCcore-12.2.0
+   Abseil/20230125.3-GCCcore-12.3.0
+   Abseil/20240116.1-GCCcore-13.2.0                        (D)
+   AlphaFold/2.1.2-foss-2021a-CUDA-11.3.1
+   AlphaFold/2.3.0-foss-2021b-CUDA-11.4.1
+   AlphaFold/2.3.1-foss-2021b-CUDA-11.3.1
+   AlphaFold/2.3.1-foss-2021b-CUDA-11.4.1
+   AlphaFold/2.3.1-foss-2022a-CUDA-11.7.0
+   AlphaFold/2.3.4-foss-2022a-CUDA-11.7.0-ColabFold        (D)
+   Amber/20.11-fosscuda-2020b-AmberTools-21.3
+   Amber/22.0-foss-2021b-AmberTools-22.3-CUDA-11.4.1
+   Amber/22.1-foss-2021b-AmberTools-22.3
+   Amber/22.4-foss-2022a-AmberTools-22.5-CUDA-11.7.0       (D)
+   Archive-Zip/1.68-GCCcore-12.2.0
+   Armadillo/11.4.3-foss-2022b
+   Armadillo/12.8.0-foss-2023b                             (D)
+   Arrow/6.0.0-foss-2021b
+   Arrow/8.0.0-foss-2021a
+   Arrow/8.0.0-foss-2022a
+   Arrow/11.0.0-gfbf-2022b
+   Arrow/14.0.1-gfbf-2023a                                 (D)
+   Aspera-CLI/3.9.6.1467.159c5b1
+   Aspera-Connect/3.9.6
+   Aspera-Connect/4.2.4                                    (D)
+   Autoconf/2.69-GCCcore-8.3.0
+   Autoconf/2.69-GCCcore-9.3.0
+   Autoconf/2.69-GCCcore-10.2.0
+   Autoconf/2.71-GCCcore-10.3.0
+   Autoconf/2.71-GCCcore-11.2.0
+   Autoconf/2.71-GCCcore-11.3.0
+
+Currently Loaded Modules:
+  1) CUDA/12.8.0
+
+ 
+
+\n========== CONDA ==========
+which python: /home/axz402/conda_envs/lmms-eval/bin/python
+python --version: Python 3.10.18
+pip --version: pip 25.2 from /home/axz402/conda_envs/lmms-eval/lib/python3.10/site-packages/pip (python 3.10)
+Using cached environment; verifying CUDA PyTorch stack
+\n========== SOURCE: lmms-eval ==========
+Using local lmms-eval source; skipping git reset to preserve local edits
+Using cached environment; skipping base deps
+Using cached environment; skipping lmms-eval install
+\n========== COMMON ENV VARS ==========
+HF_HOME=/home/axz402/.cache/huggingface
+PYTHONPATH=/home/axz402/bitnet-hpc/lmms-eval:
+\n========== PREFER SOURCE OVER INSTALLED PACKAGE ==========
+Found existing installation: lmms_eval 0.4.0
+Can't uninstall 'lmms_eval'. No files were found to uninstall.
+models_file: /home/axz402/bitnet-hpc/lmms-eval/lmms_eval/models/__init__.py
+has_bitnet_in_available_models: True
+\n========== VERIFY MODEL REGISTRY (BITNET) ==========
+has_bitnet_in_available_models: True
+BitNet import OK
+\n========== CUDA SANITY CHECK ==========
+torch 2.5.1+cu124
+cuda.is_available True
+torch.version.cuda 12.4
+device_count 1
+device_name0 NVIDIA A100-SXM4-40GB
+\n========== CRITICAL COMPATIBILITY FIXES (ONNX/ONNXSCRIPT) ==========
+torch.onnx import OK (validation)
+Using cached environment; skipping runtime deps
+\n========== LIGHTWEIGHT EXAMPLE RUN ==========
+auto_gptq present: 0.7.1
+[32m2025-09-25 06:38:18[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m309[0m - [1mVerbosity set to INFO[0m
+[32m2025-09-25 06:38:28[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m398[0m - [1mEvaluation tracker args: {}[0m
+[32m2025-09-25 06:38:28[0m | [33m[1mWARNING [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m420[0m - [33m[1m --limit SHOULD ONLY BE USED FOR TESTING.REAL METRICS SHOULD NOT BE COMPUTED USING LIMIT.[0m
+[32m2025-09-25 06:38:28[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m470[0m - [1mSelected Tasks: ['hellaswag'][0m
+[32m2025-09-25 06:38:28[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36msimple_evaluate[0m:[36m161[0m - [1mSetting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234[0m
+[32m2025-09-25 06:38:29[0m | [1mINFO    [0m | [36mlmms_eval.models.simple.bitnet[0m:[36m__init__[0m:[36m62[0m - [1mLoading BitNet from /home/axz402/bitnet-hpc/bitnet_b1_58-3B_quantized[0m
+[32m2025-09-25 06:40:22[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36mevaluate[0m:[36m402[0m - [1mRunning on rank 0 (local rank 0)[0m
+[32m2025-09-25 06:40:22[0m | [1mINFO    [0m | [36mlmms_eval.api.task[0m:[36mbuild_all_requests[0m:[36m427[0m - [1mBuilding contexts for hellaswag on rank 0...[0m
+[32m2025-09-25 06:40:22[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36mevaluate[0m:[36m490[0m - [1mRunning loglikelihood requests[0m
+[32m2025-09-25 06:40:24[0m | [1mINFO    [0m | [36mlmms_eval.loggers.evaluation_tracker[0m:[36msave_results_aggregated[0m:[36m239[0m - [1mOutput path not provided, skipping saving results aggregated[0m
+bitnet (pretrained=/home/axz402/bitnet-hpc/bitnet_b1_58-3B_quantized,device=cuda,torch_dtype=float16), gen_kwargs: (), limit: 5.0, num_fewshot: None, batch_size: 10
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value|   |Stderr|
+|---------|------:|------|-----:|--------|---|----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |  0.4|±  |0.2449|
+|hellaswag|      1|none  |     0|acc_norm|↑  |  0.2|±  |0.2000|
+
+\n========== DONE ==========
+Thu Sep 25 06:40:27 EDT 2025

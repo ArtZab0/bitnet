@@ -1,0 +1,145 @@
+========== SLURM ENV ==========
+Thu Sep 25 07:04:16 EDT 2025
+dgxt001
+SLURM_JOB_ID=2841426
+SLURM_JOB_NODELIST=dgxt001
+CUDA_VISIBLE_DEVICES=0
+PWD=/home/axz402/bitnet-hpc
+\n========== MODULES ==========
+
+------------------ /usr/local/easybuild_allnodes/modules/all -------------------
+   4ti2/1.6.9-GCC-11.3.0
+   ABINIT/9.4.2-foss-2021a
+   ABINIT/9.6.2-intel-2021b
+   ABINIT/9.10.3-intel-2022a
+   ABINIT/10.0.5-intel-2022a                               (D)
+   ABySS/2.2.5-foss-2020b
+   ACTC/1.1-GCCcore-11.3.0
+   ANTs/2.5.0-foss-2022a
+   ANTs/2.5.0-foss-2022b                                   (D)
+   ASE/3.20.1-fosscuda-2020b
+   ASE/3.22.1-foss-2022a                                   (D)
+   ATK/2.36.0-GCCcore-10.3.0
+   ATK/2.36.0-GCCcore-11.2.0
+   ATK/2.38.0-GCCcore-11.3.0
+   ATK/2.38.0-GCCcore-12.2.0
+   ATK/2.38.0-GCCcore-12.3.0
+   ATK/2.38.0-GCCcore-13.2.0                               (D)
+   AUGUSTUS/3.4.0-foss-2021b
+   Abseil/20230125.2-GCCcore-12.2.0
+   Abseil/20230125.3-GCCcore-12.3.0
+   Abseil/20240116.1-GCCcore-13.2.0                        (D)
+   AlphaFold/2.1.2-foss-2021a-CUDA-11.3.1
+   AlphaFold/2.3.0-foss-2021b-CUDA-11.4.1
+   AlphaFold/2.3.1-foss-2021b-CUDA-11.3.1
+   AlphaFold/2.3.1-foss-2021b-CUDA-11.4.1
+   AlphaFold/2.3.1-foss-2022a-CUDA-11.7.0
+   AlphaFold/2.3.4-foss-2022a-CUDA-11.7.0-ColabFold        (D)
+   Amber/20.11-fosscuda-2020b-AmberTools-21.3
+   Amber/22.0-foss-2021b-AmberTools-22.3-CUDA-11.4.1
+   Amber/22.1-foss-2021b-AmberTools-22.3
+   Amber/22.4-foss-2022a-AmberTools-22.5-CUDA-11.7.0       (D)
+   Archive-Zip/1.68-GCCcore-12.2.0
+   Armadillo/11.4.3-foss-2022b
+   Armadillo/12.8.0-foss-2023b                             (D)
+   Arrow/6.0.0-foss-2021b
+   Arrow/8.0.0-foss-2021a
+   Arrow/8.0.0-foss-2022a
+   Arrow/11.0.0-gfbf-2022b
+   Arrow/14.0.1-gfbf-2023a                                 (D)
+   Aspera-CLI/3.9.6.1467.159c5b1
+   Aspera-Connect/3.9.6
+   Aspera-Connect/4.2.4                                    (D)
+   Autoconf/2.69-GCCcore-8.3.0
+   Autoconf/2.69-GCCcore-9.3.0
+   Autoconf/2.69-GCCcore-10.2.0
+   Autoconf/2.71-GCCcore-10.3.0
+   Autoconf/2.71-GCCcore-11.2.0
+   Autoconf/2.71-GCCcore-11.3.0
+
+Currently Loaded Modules:
+  1) CUDA/12.8.0
+
+ 
+
+\n========== CONDA ==========
+which python: /home/axz402/conda_envs/lmms-eval/bin/python
+python --version: Python 3.10.18
+pip --version: pip 25.2 from /home/axz402/conda_envs/lmms-eval/lib/python3.10/site-packages/pip (python 3.10)
+Using cached environment; verifying CUDA PyTorch stack
+\n========== SOURCE: lmms-eval ==========
+Using local lmms-eval source; skipping git reset to preserve local edits
+Using cached environment; skipping base deps
+Using cached environment; skipping lmms-eval install
+\n========== COMMON ENV VARS ==========
+HF_HOME=/home/axz402/.cache/huggingface
+PYTHONPATH=/home/axz402/bitnet-hpc/lmms-eval:
+\n========== VERIFY MODEL REGISTRY (BITNET) ==========
+has_bitnet_in_available_models: True
+BitNet import OK
+\n========== CUDA SANITY CHECK ==========
+torch 2.5.1+cu124
+cuda.is_available True
+torch.version.cuda 12.4
+device_count 1
+device_name0 NVIDIA A100-SXM4-40GB
+\n========== PREPARE OPTIONAL RUNTIME DEPS ==========
+Requirement already satisfied: tenacity==8.3.0 in /home/axz402/conda_envs/lmms-eval/lib/python3.10/site-packages (8.3.0)
+Requirement already satisfied: protobuf==3.20.* in /home/axz402/conda_envs/lmms-eval/lib/python3.10/site-packages (3.20.3)
+Requirement already satisfied: numpy==1.26.4 in /home/axz402/conda_envs/lmms-eval/lib/python3.10/site-packages (1.26.4)
+Requirement already satisfied: opencv-python-headless==4.8.1.78 in /home/axz402/conda_envs/lmms-eval/lib/python3.10/site-packages (4.8.1.78)
+\n========== DEFINE TASK GROUPS ==========
+\n========== DETECT MODEL CAPABILITIES ==========
+BITNET_IS_MULTIMODAL: False
+\n========== RUN LANGUAGE BACKBONE SENSITIVITY (FP16 vs QUANT) ==========
+Tasks: hellaswag,mmlu,gsm8k
+FP16 baseline (if available): /home/axz402/bitnet-hpc/bitnet_b1_58-3B_quantized
+[32m2025-09-25 07:06:23[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m309[0m - [1mVerbosity set to INFO[0m
+[32m2025-09-25 07:06:34[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m398[0m - [1mEvaluation tracker args: {}[0m
+[32m2025-09-25 07:06:34[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m470[0m - [1mSelected Tasks: ['gsm8k', 'hellaswag', 'mmlu'][0m
+[32m2025-09-25 07:06:34[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36msimple_evaluate[0m:[36m161[0m - [1mSetting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234[0m
+[32m2025-09-25 07:06:35[0m | [1mINFO    [0m | [36mlmms_eval.models.simple.bitnet[0m:[36m__init__[0m:[36m62[0m - [1mLoading BitNet from /home/axz402/bitnet-hpc/bitnet_b1_58-3B_quantized[0m
+[32m2025-09-25 07:09:07[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36mevaluate[0m:[36m402[0m - [1mRunning on rank 0 (local rank 0)[0m
+[32m2025-09-25 07:09:07[0m | [1mINFO    [0m | [36mlmms_eval.api.task[0m:[36mbuild_all_requests[0m:[36m427[0m - [1mBuilding contexts for mmlu_abstract_algebra on rank 0...[0m
+[32m2025-09-25 07:09:07[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m369[0m - [31m[1mError during evaluation: task.build_requests() did not find any docs!. Please set `--verbosity=DEBUG` to get more information.[0m
+Quantized: /home/axz402/bitnet-hpc/bitnet_b1_58-3B_quantized
+[32m2025-09-25 07:09:40[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m309[0m - [1mVerbosity set to INFO[0m
+[32m2025-09-25 07:09:48[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m398[0m - [1mEvaluation tracker args: {}[0m
+[32m2025-09-25 07:09:48[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m470[0m - [1mSelected Tasks: ['gsm8k', 'hellaswag', 'mmlu'][0m
+[32m2025-09-25 07:09:48[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36msimple_evaluate[0m:[36m161[0m - [1mSetting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234[0m
+[32m2025-09-25 07:09:49[0m | [1mINFO    [0m | [36mlmms_eval.models.simple.bitnet[0m:[36m__init__[0m:[36m62[0m - [1mLoading BitNet from /home/axz402/bitnet-hpc/bitnet_b1_58-3B_quantized[0m
+[32m2025-09-25 07:12:20[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36mevaluate[0m:[36m402[0m - [1mRunning on rank 0 (local rank 0)[0m
+[32m2025-09-25 07:12:20[0m | [1mINFO    [0m | [36mlmms_eval.api.task[0m:[36mbuild_all_requests[0m:[36m427[0m - [1mBuilding contexts for mmlu_abstract_algebra on rank 0...[0m
+[32m2025-09-25 07:12:20[0m | [31m[1mERROR   [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m369[0m - [31m[1mError during evaluation: task.build_requests() did not find any docs!. Please set `--verbosity=DEBUG` to get more information.[0m
+\n========== ATTEMPT MULTIMODAL (IMAGE) WITH BITNET: WILL SKIP (TEXT-ONLY) ==========
+Skipping image task mmbench for bitnet (text-only wrapper).
+Skipping image task mmvet for bitnet (text-only wrapper).
+Skipping image task gqa for bitnet (text-only wrapper).
+Skipping image task vqav2 for bitnet (text-only wrapper).
+Skipping image task textvqa for bitnet (text-only wrapper).
+Skipping image task ok_vqa for bitnet (text-only wrapper).
+Skipping image task docvqa for bitnet (text-only wrapper).
+Skipping image task chartqa for bitnet (text-only wrapper).
+Skipping image task mathvista for bitnet (text-only wrapper).
+Skipping image task mathverse for bitnet (text-only wrapper).
+Skipping image task coco_cap for bitnet (text-only wrapper).
+Skipping image task nocaps for bitnet (text-only wrapper).
+Skipping image task refcoco for bitnet (text-only wrapper).
+Skipping image task refcoco+ for bitnet (text-only wrapper).
+Skipping image task refcocog for bitnet (text-only wrapper).
+Skipping image task visualwebbench for bitnet (text-only wrapper).
+Skipping image task mmstar for bitnet (text-only wrapper).
+\n========== ATTEMPT MULTIMODAL (VIDEO) WITH BITNET: WILL SKIP (TEXT-ONLY) ==========
+Skipping video task mvbench for bitnet (text-only wrapper).
+Skipping video task nextqa for bitnet (text-only wrapper).
+Skipping video task vatex for bitnet (text-only wrapper).
+Skipping video task youcook2_val for bitnet (text-only wrapper).
+Skipping video task moviechat for bitnet (text-only wrapper).
+Skipping video task video_detail_description for bitnet (text-only wrapper).
+Skipping video task longvideobench for bitnet (text-only wrapper).
+Skipping video task videomme for bitnet (text-only wrapper).
+Skipping video task videommmu for bitnet (text-only wrapper).
+Skipping video task videoevalpro for bitnet (text-only wrapper).
+\nNOTE: To actually run the image/video suite, switch to a VLM model (e.g., 'llava_vid', 'internvideo2', 'videollama3', 'qwen2_5_vl') and set --model and --model_args appropriately, keeping the same IMAGE_TASKS/VIDEO_TASKS lists.
+\n========== DONE ==========
+Thu Sep 25 07:12:22 EDT 2025
